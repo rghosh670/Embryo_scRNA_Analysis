@@ -84,7 +84,7 @@ def generateCSVs(filePath, indices, timesList):
     newDataFrame.to_csv(filePath)
     return None
 
-for i in range(0, 138): # I'll be honest, I shouldn't have added this - but it worked I guess
+for i in range(0, 138): # I'll be honest, I shouldn't have added this - but it worked I guess. Really shouldn't be hardcoding.
     indexCSV = pd.read_csv('/Users/rohitghosh/Downloads/indicesPerCellType.csv', skiprows=lambda x: x not in [i], header = None)
 
     f = open('./Embryo_scRNA/data/usefulTimes.txt', 'r')
