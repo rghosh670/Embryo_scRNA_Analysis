@@ -9,7 +9,7 @@ f.close()
 userows = list(range(0, 20))
 esetWithoutUnexpressedGenes = pd.read_csv("./Embryo_scRNA/data/esetWithoutUnexpressedGenes.csv", skiprows=lambda x: x not in userows)
 
-geneExpression = list(esetWithoutUnexpressedGenes.iloc[0, :])
+geneExpression = list(esetWithoutUnexpressedGenes.iloc[3, :])
 print(geneExpression.pop(0))
 nonZeroExpression = []
 nonZeroTime = []

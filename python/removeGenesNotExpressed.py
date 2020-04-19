@@ -10,5 +10,5 @@ for i in range(len(numCellsGeneExpression)):
 
 
 parsedEsetByGene = pd.read_csv("./Embryo_scRNA/data/parsedEsetByGene.csv", skiprows = zeroList)
-parsedEsetByGene.to_csv('/Users/rohitghosh/Downloads/esetWithoutUnexpressedGenes.csv', index = False)
+parsedEsetByGene.to_csv('./Embryo_scRNA/data/esetWithoutUnexpressedGenes.csv', index = False)
 

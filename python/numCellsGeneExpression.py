@@ -17,6 +17,6 @@ for i in range(1, len(data)):
             numCells = numCells + 1
     numCellsExpressedPerGene.update({data[i][0]: numCells})
 
-w = csv.writer(open("/Users/rohitghosh/Downloads/numCellsGeneExpression.csv", "w"))
+w = csv.writer(open("./Embryo_scRNA/data/numCellsGeneExpression.csv", "w"))
 for key, val in numCellsExpressedPerGene.items():
     w.writerow([key, val])
