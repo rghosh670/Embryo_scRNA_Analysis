@@ -18,6 +18,6 @@ for i in indexList:
     myDict.setdefault(namesList[i], []).append(k) # make dictionary with values corresponding to lists of indices
     k = k + 1
 
-w = csv.writer(open("./Embryo_scRNA/data/indicesPerCellType", "w")) # print dictionary out to csv
+w = csv.writer(open("./Embryo_scRNA/data/indicesPerCellType.csv", "w")) # print dictionary out to csv
 for key, val in myDict.items():
     w.writerow([key, val])

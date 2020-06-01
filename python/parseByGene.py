@@ -24,4 +24,4 @@ for i in enumerate(esetIDs):
 parsedEsetByGene = pd.read_csv("./Embryo_scRNA/data/parsedEset.csv", header = 0, skiprows=lambda x: x not in indexList)
 parsedEsetByGene.drop(['Unnamed: 0', 'Unnamed: 0.1'], inplace = True, axis = 1)
 
-parsedEsetByGene.to_csv('/Users/rohitghosh/Downloads/parsedEsetByGene.csv', index = False)
+parsedEsetByGene.to_csv('./Embryo_scRNA/data/parsedEsetByGene.csv', index = False)
