@@ -90,14 +90,13 @@ df = pd.DataFrame(index=cellListWithoutDuplicates,
                   columns=timeListWithoutDuplicates)
 df = df.fillna(1e-10)
 
-def correctExpression():
-    # expressionList = knnSearchFunction(timeList, expressionList, cellList)
-    f = open('/Users/rohitghosh/Downloads/rab-3CorrectedExpression.txt', 'r') # generated using the function commented above
-    expressionList = f.read().splitlines()
-    expressionList = [float(i) for i in expressionList]
-    f.close()
-    return
-correctExpression()
+
+# expressionList = knnSearchFunction(timeList, expressionList, cellList)
+f = open('/Users/rohitghosh/Downloads/rab-3CorrectedExpression.txt', 'r') # generated using the function commented above
+expressionList = f.read().splitlines()
+expressionList = [float(i) for i in expressionList]
+f.close()
+
 
 def plot(indicesOfCellsToPlot, label = False):
     colorDict = {}

@@ -9,17 +9,17 @@ import statistics
 import random
 from math import floor
 
-# userGene = input('Enter Gene Name: ').lower().strip()
-# userCell = input('All cells (all)? If not, which cells? ').split()
-# userLabel = input('Label? Y/N: ')
-# userLabel = (userLabel.lower() == 'y')
-# userExcludeZeroValues = input('Exclude Zero Values? Y/N: ')
-# userExcludeZeroValues = (userExcludeZeroValues.lower() == 'y')
+userGene = input('Enter Gene Name: ').lower().strip()
+userCell = input('All cells (all)? If not, which cells? ').split()
+userLabel = input('Label? Y/N: ')
+userLabel = (userLabel.lower() == 'y')
+userExcludeZeroValues = input('Exclude Zero Values? Y/N: ')
+userExcludeZeroValues = (userExcludeZeroValues.lower() == 'y')
 
-userGene = 'rab-3'
-userCell = ['IL1', 'AVH']
-userLabel = True
-userExcludeZeroValues = False
+# userGene = 'rab-3'
+# userCell = ['IL1', 'AVH']
+# userLabel = True
+# userExcludeZeroValues = False
 
 matplotlib.use('wxAgg')
 with open('./Embryo_scRNA/data/finalDict.txt') as json_file:

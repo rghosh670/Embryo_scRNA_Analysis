@@ -34,13 +34,13 @@ def knnSearchFunction(timeList, expressionList, cellList, r=30):
         print(i)
         mat = matDict[cellList[i]]
         k = len(list(x for x in mat[:, 0] if mat
-                    [i][0] - r <= x <= mat[i][0] + r))
+                     [i][0] - r <= x <= mat[i][0] + r))
         maxK = max(k, maxK)
-
 
     for key in matDict.keys():
         print(key)
-        nbrs = NearestNeighbors(n_neighbors=maxK, algorithm='ball_tree', metric=my_metric).fit(matDict[key])
+        nbrs = NearestNeighbors(
+            n_neighbors=maxK, algorithm='ball_tree', metric=my_metric).fit(matDict[key])
         neighborsDict[key] = nbrs.kneighbors(matDict[key])
 
     for i in length:
@@ -59,20 +59,19 @@ def knnSearchFunction(timeList, expressionList, cellList, r=30):
 
     return newExpression
 
-
 # main routine
 
-# userGene = input('Enter Gene Name: ').lower().strip()
-# userCell = input('All cells (all)? If not, which cells? ').split()
-# userLabel = input('Label? Y/N: ')
-# userLabel = (userLabel.lower() == 'y')
-# userExcludeZeroValues = input('Exclude Zero Values? Y/N: ')
-# userExcludeZeroValues = (userExcludeZeroValues.lower() == 'y')
+userGene = input('Enter Gene Name: ').lower().strip()
+userCell = input('All cells (all)? If not, which cells? ').split()
+userLabel = input('Label? Y/N: ')
+userLabel = (userLabel.lower() == 'y')
+userExcludeZeroValues = input('Exclude Zero Values? Y/N: ')
+userExcludeZeroValues = (userExcludeZeroValues.lower() == 'y')
 
-userGene = 'rab-3'
-userCell = ['IL1', 'AVH']
-userLabel = True
-userExcludeZeroValues = False
+# userGene = 'rab-3'
+# userCell = ['IL1', 'AVH']
+# userLabel = True
+# userExcludeZeroValues = False
 
 matplotlib.use('wxAgg')
 with open('./Embryo_scRNA/data/finalDict.txt') as json_file:
